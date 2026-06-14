@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여행 계획</title>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,'Noto Sans KR',BlinkMacSystemFont,sans-serif;
+      background:#F3F5F8;color:#1F2D3D;min-height:100vh;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px}
+    h1{font-size:1.6rem;font-weight:800;letter-spacing:-.03em;margin-bottom:8px}
+    .sub{font-size:13px;color:#7B8A99;margin-bottom:40px}
+    .list{display:flex;flex-direction:column;gap:12px;width:100%;max-width:480px}
+    .card{background:#fff;border:1px solid #E5EAF0;border-radius:14px;
+      padding:20px 22px;text-decoration:none;color:inherit;
+      display:flex;align-items:center;gap:16px;
+      box-shadow:0 1px 4px rgba(0,0,0,.05);transition:box-shadow .15s}
+    .card:hover{box-shadow:0 4px 16px rgba(0,0,0,.1)}
+    .card-dot{width:40px;height:40px;border-radius:10px;flex-shrink:0;
+      background:linear-gradient(135deg,#0D1B2A,#102845);
+      display:flex;align-items:center;justify-content:center;font-size:18px}
+    .card-title{font-size:15px;font-weight:700}
+    .card-sub{font-size:12px;color:#7B8A99;margin-top:2px}
+  </style>
+</head>
+<body>
+  <h1>여행 계획</h1>
+  <p class="sub">lazyduo · travel-plan</p>
+  <div class="list">
+    <a class="card" href="east-europe-2026/">
+      <div class="card-dot">✈</div>
+      <div>
+        <div class="card-title">동유럽 가족여행</div>
+        <div class="card-sub">2026년 9월 14일 — 9월 25일 · 프라하 · 잘츠부르크 · 빈 · 부다페스트</div>
+      </div>
+    </a>
+  </div>
+</body>
+</html>
