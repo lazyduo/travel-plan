@@ -1,0 +1,354 @@
+meta:
+  title: 동유럽 가족여행
+  dates_ko: "2026년 9월 14일 — 9월 25일"
+  duration: "11박 12일"
+
+flights:
+  outbound:
+    flight_no: "KE 969"
+    dep_airport: "ICN"
+    dep_city: "서울 (인천국제공항)"
+    dep_date: "2026-09-14"
+    dep_time: "11:05"
+    arr_airport: "PRG"
+    arr_city: "프라하 (Václav Havel 국제공항)"
+    arr_date: "2026-09-14"
+    arr_time: "17:05"
+    class: "일반석"
+    baggage: "1 Piece"
+  return:
+    flight_no: "KE 964"
+    dep_airport: "BUD"
+    dep_city: "부다페스트 (Liszt Ferenc 국제공항)"
+    dep_date: "2026-09-24"
+    dep_time: "20:10"
+    arr_airport: "ICN"
+    arr_city: "서울 (인천국제공항)"
+    arr_date: "2026-09-25"
+    arr_time: "13:40"
+    class: "일반석"
+    baggage: "1 Piece"
+
+cities:
+  - id: prague
+    name_ko: 프라하
+    name_en: Prague
+    dates_ko: "9월 14일 (월) — 16일 (수)"
+    nights: 2
+    hotel: null
+    hotel_map_url: null
+    tips: null
+    highlights:
+      - name: "카를교 (Charles Bridge)"
+        map_url: "https://maps.google.com/?q=Charles+Bridge+Prague"
+      - name: "프라하 성 (Prague Castle)"
+        map_url: "https://maps.google.com/?q=Prague+Castle"
+      - name: "구시가지 광장 (Old Town Square)"
+        map_url: "https://maps.google.com/?q=Old+Town+Square+Prague"
+      - name: "천문 시계탑 (Astronomical Clock)"
+        map_url: "https://maps.google.com/?q=Prague+Astronomical+Clock"
+      - name: "야경"
+        map_url: null
+
+  - id: salzburg
+    name_ko: 잘츠부르크
+    name_en: Salzburg
+    dates_ko: "9월 16일 (수) — 18일 (금)"
+    nights: 2
+    hotel: null
+    hotel_map_url: null
+    tips: null
+    highlights:
+      - name: "도레미 투어 (Sound of Music Tour)"
+        map_url: "https://maps.google.com/?q=Sound+of+Music+Tour+Salzburg"
+      - name: "미라벨 정원 (Mirabell Gardens)"
+        map_url: "https://maps.google.com/?q=Mirabell+Gardens+Salzburg"
+      - name: "볼프강 호수 (Wolfgangsee)"
+        map_url: "https://maps.google.com/?q=Wolfgangsee+Austria"
+      - name: "할슈타트 (Hallstatt)"
+        map_url: "https://maps.google.com/?q=Hallstatt+Austria"
+      - name: "모차르트 생가 (Mozart Birthplace)"
+        map_url: "https://maps.google.com/?q=Mozart+Birthplace+Salzburg"
+      - name: "호엔잘츠부르크 성"
+        map_url: "https://maps.google.com/?q=Hohensalzburg+Castle"
+
+  - id: vienna
+    name_ko: 빈
+    name_en: Vienna
+    dates_ko: "9월 18일 (금) — 21일 (월)"
+    nights: 3
+    hotel: "Novotel Wien Hauptbahnhof"
+    hotel_map_url: "https://maps.google.com/?q=Novotel+Wien+Hauptbahnhof"
+    tips:
+      - type: cafe
+        label: "조식 추천 카페"
+        name: "Aufzug Café"
+        desc: "숙소 근처 · 조식 미포함 숙소라 추천"
+        url: "https://maps.app.goo.gl/dxBDrYgKCfjxNMJd9"
+    highlights:
+      - name: "벨베데레 궁전 (Belvedere) · 클림트 '키스'"
+        map_url: "https://maps.google.com/?q=Belvedere+Palace+Vienna"
+      - name: "쇤브룬 궁전 (Schönbrunn Palace)"
+        map_url: "https://maps.google.com/?q=Schonbrunn+Palace+Vienna"
+      - name: "슈테판 대성당 (Stephansdom)"
+        map_url: "https://maps.google.com/?q=Stephansdom+Vienna"
+      - name: "레오폴트 미술관 (Leopold Museum)"
+        map_url: "https://maps.google.com/?q=Leopold+Museum+Vienna"
+      - name: "멜크 수도원 (Melk Abbey) · 바하우 계곡"
+        map_url: "https://maps.google.com/?q=Melk+Abbey+Austria"
+      - name: "국회의사당 (Austrian Parliament)"
+        map_url: "https://maps.google.com/?q=Austrian+Parliament+Building+Vienna"
+      - name: "클래식 음악회 (미정)"
+        map_url: null
+
+  - id: budapest
+    name_ko: 부다페스트
+    name_en: Budapest
+    dates_ko: "9월 21일 (월) — 24일 (목)"
+    nights: 3
+    hotel: "Budapest Marriott"
+    hotel_map_url: "https://maps.google.com/?q=Budapest+Marriott+Hotel"
+    tips: null
+    highlights:
+      - name: "어부의 요새 (Fisherman's Bastion)"
+        map_url: "https://maps.google.com/?q=Fisherman%27s+Bastion+Budapest"
+      - name: "국회의사당 (Hungarian Parliament)"
+        map_url: "https://maps.google.com/?q=Hungarian+Parliament+Building"
+      - name: "세체니 온천 (Széchenyi Thermal Bath)"
+        map_url: "https://maps.google.com/?q=Szechenyi+Thermal+Bath+Budapest"
+      - name: "도나우 강 유람선"
+        map_url: "https://maps.google.com/?q=Danube+River+Cruise+Budapest"
+      - name: "전망대 · 야경"
+        map_url: null
+      - name: "브라티슬라바 (경유 가능)"
+        map_url: "https://maps.google.com/?q=Bratislava+Old+Town"
+
+days:
+  - date: "2026-09-14"
+    day_num: 1
+    weekday: 월
+    city_id: prague
+    title: "인천 출발 · 프라하 도착"
+    activities:
+      - type: flight
+        name: "인천 → 프라하 (KE 969)"
+        desc: "11:05 ICN 출발 · 17:05 PRG 도착"
+      - type: hotel
+        name: "호텔 체크인"
+        desc: "저녁 체크인 예정"
+      - type: night
+        name: "프라하 야경 감상"
+        desc: "카를교 · 구시가지 야경"
+
+  - date: "2026-09-15"
+    day_num: 2
+    weekday: 화
+    city_id: prague
+    title: "프라하 관광"
+    activities:
+      - type: sight
+        name: "카를교 (Charles Bridge)"
+        desc: "블타바 강 위의 바로크 석교 · 30개의 성인상"
+        map_url: "https://maps.google.com/?q=Charles+Bridge+Prague"
+      - type: sight
+        name: "프라하 성 (Prague Castle)"
+        desc: "세계 최대 규모의 성 단지 · 성 비투스 대성당"
+        map_url: "https://maps.google.com/?q=Prague+Castle"
+      - type: sight
+        name: "구시가지 광장 (Old Town Square)"
+        desc: "천문 시계탑 (오를로이) · 틴 성당"
+        map_url: "https://maps.google.com/?q=Old+Town+Square+Prague"
+
+  - date: "2026-09-16"
+    day_num: 3
+    weekday: 수
+    city_id: salzburg
+    transfer:
+      type: flight
+      from: "프라하"
+      to: "잘츠부르크"
+      note: "항공편 이동"
+    title: "잘츠부르크 이동"
+    activities:
+      - type: nature
+        name: "미라벨 정원 (Mirabell Gardens)"
+        desc: "사운드 오브 뮤직 촬영지 · 바로크 정원"
+        map_url: "https://maps.google.com/?q=Mirabell+Gardens+Salzburg"
+      - type: sight
+        name: "구시가지"
+        desc: "게트라이데 거리 · 호엔잘츠부르크 성"
+        map_url: "https://maps.google.com/?q=Salzburg+Old+Town"
+
+  - date: "2026-09-17"
+    day_num: 4
+    weekday: 목
+    city_id: salzburg
+    title: "당일 투어"
+    activities:
+      - type: music
+        name: "도레미 투어 (Sound of Music Tour)"
+        desc: "사운드 오브 뮤직 실제 촬영지 탐방 · 반나절 소요"
+        tag: "오전"
+      - type: nature
+        name: "볼프강 호수 (Wolfgangsee)"
+        desc: "알프스 호수 · 장크트 볼프강 마을"
+        map_url: "https://maps.google.com/?q=Wolfgangsee+Austria"
+      - type: sight
+        name: "할슈타트 (Hallstatt)"
+        desc: "유네스코 세계문화유산 · 소금 광산 마을 · 호수 풍경"
+        map_url: "https://maps.google.com/?q=Hallstatt+Austria"
+      - type: music
+        name: "모차르트 생가 & 동네"
+        desc: "게트라이데 거리 9번지 · 모차르트 박물관"
+        map_url: "https://maps.google.com/?q=Mozart+Birthplace+Salzburg"
+
+  - date: "2026-09-18"
+    day_num: 5
+    weekday: 금
+    city_id: vienna
+    transfer:
+      type: drive
+      from: "잘츠부르크"
+      to: "빈"
+      note: "경유 관광 포함"
+    title: "빈 이동"
+    activities:
+      - type: sight
+        name: "멜크 수도원 (Melk Abbey)"
+        desc: "도나우 강 절벽 위의 바로크 수도원"
+        tag: "경유"
+        map_url: "https://maps.google.com/?q=Melk+Abbey+Austria"
+      - type: nature
+        name: "바하우 계곡 (Wachau Valley)"
+        desc: "슈피츠 · 뒤른슈타인 · 도나우 강변 포도밭 절경"
+        tag: "경유"
+        map_url: "https://maps.google.com/?q=Wachau+Valley+Austria"
+      - type: hotel
+        name: "체크인 : Novotel Wien Hauptbahnhof"
+        desc: "빈 중앙역 인근 · 4성급"
+        map_url: "https://maps.google.com/?q=Novotel+Wien+Hauptbahnhof"
+      - type: sight
+        name: "슈테판 대성당 (Stephansdom)"
+        desc: "빈의 상징 · 모자이크 지붕 · 고딕 첨탑"
+        map_url: "https://maps.google.com/?q=Stephansdom+Vienna"
+
+  - date: "2026-09-19"
+    day_num: 6
+    weekday: 토
+    city_id: vienna
+    title: "미술 & 구시가지"
+    activities:
+      - type: art
+        name: "벨베데레 궁전 (Belvedere)"
+        desc: "구스타프 클림트 '키스 (The Kiss)' 원작 소장"
+        map_url: "https://maps.google.com/?q=Belvedere+Palace+Vienna"
+      - type: sight
+        name: "구시가지 & 앙커 시계 (Ankeruhr)"
+        desc: "호에르 마르크트 광장 · 로마네스크 시계 퍼레이드"
+        map_url: "https://maps.google.com/?q=Anker+Clock+Vienna"
+      - type: music
+        name: "클래식 음악회"
+        desc: "빈 필하모닉 · 국립 오페라하우스 (확인 필요)"
+        tag: "미정"
+
+  - date: "2026-09-20"
+    day_num: 7
+    weekday: 일
+    city_id: vienna
+    title: "궁전 & 미술관"
+    activities:
+      - type: sight
+        name: "쇤브룬 궁전 (Schönbrunn Palace)"
+        desc: "합스부르크 왕가 여름 궁전 · 유네스코 세계유산 · 전망대"
+        map_url: "https://maps.google.com/?q=Schonbrunn+Palace+Vienna"
+      - type: art
+        name: "레오폴트 미술관 (Leopold Museum)"
+        desc: "에곤 쉴레 · 오스카 코코슈카 컬렉션"
+        map_url: "https://maps.google.com/?q=Leopold+Museum+Vienna"
+      - type: sight
+        name: "국회의사당 (Austrian Parliament)"
+        desc: "그리스 신전 양식 · 팔라스 아테나 분수"
+        map_url: "https://maps.google.com/?q=Austrian+Parliament+Building+Vienna"
+
+  - date: "2026-09-21"
+    day_num: 8
+    weekday: 월
+    city_id: budapest
+    transfer:
+      type: drive
+      from: "빈"
+      to: "부다페스트"
+      note: "약 2.5~3시간"
+    title: "부다페스트 이동"
+    activities:
+      - type: shop
+        name: "판드로프 아울렛 (Designer Outlet Parndorf)"
+        desc: "오스트리아 최대 명품 아울렛 · 이동 중 경유"
+        tag: "선택"
+        map_url: "https://maps.google.com/?q=Designer+Outlet+Parndorf"
+      - type: sight
+        name: "브라티슬라바 (Bratislava)"
+        desc: "슬로바키아 수도 · 구시가지 · 브라티슬라바 성"
+        tag: "선택"
+        map_url: "https://maps.google.com/?q=Bratislava+Old+Town"
+      - type: hotel
+        name: "체크인 : Budapest Marriott"
+        desc: "도나우 강변 · 5성급 · 세체니 다리 전망"
+        map_url: "https://maps.google.com/?q=Budapest+Marriott+Hotel"
+      - type: night
+        name: "야경 감상"
+        desc: "세체니 다리 · 국회의사당 야경"
+
+  - date: "2026-09-22"
+    day_num: 9
+    weekday: 화
+    city_id: budapest
+    title: "부다 지구 관광"
+    activities:
+      - type: sight
+        name: "어부의 요새 (Fisherman's Bastion)"
+        desc: "동화 속 탑 · 부다페스트 전경 파노라마"
+        map_url: "https://maps.google.com/?q=Fisherman%27s+Bastion+Budapest"
+      - type: sight
+        name: "전망대"
+        desc: "페스트 지구 & 도나우 강 · 세체니 다리 조망"
+      - type: sight
+        name: "국회의사당 (Hungarian Parliament)"
+        desc: "세계 3위 규모 · 도나우 강변 고딕 건축 · 내부 투어"
+        map_url: "https://maps.google.com/?q=Hungarian+Parliament+Building"
+
+  - date: "2026-09-23"
+    day_num: 10
+    weekday: 수
+    city_id: budapest
+    title: "온천 & 유람선"
+    activities:
+      - type: spa
+        name: "세체니 온천 (Széchenyi Thermal Bath)"
+        desc: "부다페스트 최대 온천 · 야외 풀 · 네오 바로크 건축 · 다른 온천도 가능"
+        map_url: "https://maps.google.com/?q=Szechenyi+Thermal+Bath+Budapest"
+      - type: boat
+        name: "도나우 강 유람선"
+        desc: "강 위에서 감상하는 국회의사당 · 세체니 다리 · 부다 성 야경"
+
+  - date: "2026-09-24"
+    day_num: 11
+    weekday: 목
+    city_id: null
+    title: "귀국"
+    activities:
+      - type: flight
+        name: "부다페스트 → 인천 (KE 964)"
+        desc: "20:10 BUD 출발"
+        tag: "20:10"
+
+  - date: "2026-09-25"
+    day_num: 12
+    weekday: 금
+    city_id: null
+    title: "인천 도착"
+    activities:
+      - type: flight
+        name: "인천국제공항 도착"
+        desc: "13:40 ICN 도착 · 동유럽 4개국 11박 12일 여행 완료"
+        tag: "13:40"
