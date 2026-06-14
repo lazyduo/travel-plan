@@ -1,14 +1,15 @@
-name: Generate HTML from YAML
+name: Generate & Deploy
 
 on:
   push:
     branches: [main]
     paths:
+      - 'index.html'
       - '**/europe_2026.yaml'
       - '**/generate_itinerary.py'
 
 jobs:
-  generate:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -23,16 +24,16 @@ jobs:
 
       - run: pip install pyyaml
 
-      - name: Generate HTML
+      - name: Build site
         run: |
+          mkdir -p _site/east-europe-2026
+          cp index.html _site/
           python3 east-europe-2026/generate_itinerary.py \
             east-europe-2026/europe_2026.yaml \
-            east-europe-2026/index.html
+            _site/east-europe-2026/index.html
 
-      - name: Commit if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add east-europe-2026/index.html
-          git diff --staged --quiet && echo "No changes" || \
-            git commit -m "auto: regenerate HTML from YAML [skip ci]" && git push
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site

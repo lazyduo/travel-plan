@@ -5,34 +5,41 @@ URL: https://lazyduo.github.io/travel-plan/
 
 ## 핵심 규칙
 
-**HTML을 직접 편집하지 말 것.** YAML만 편집하고 푸시하면 GitHub Actions가 HTML을 자동 재생성한다.
+**HTML을 직접 편집하지 말 것.** YAML만 편집하고 푸시하면 끝.
 
 ```
-# YAML만 편집 후 푸시하면 끝
 git add east-europe-2026/europe_2026.yaml
 git commit -m "update: ..."
 git push
-# → Actions가 index.html 자동 생성 & 커밋 → Pages 배포
+# → Actions가 gh-pages 브랜치에 HTML 배포 → Pages 반영
 ```
 
-로컬에서 미리 확인하고 싶을 때만 직접 실행:
+로컬 미리보기가 필요할 때만 직접 실행 (커밋 불필요):
 ```
 pip install pyyaml
 python3 east-europe-2026/generate_itinerary.py \
   east-europe-2026/europe_2026.yaml \
   east-europe-2026/index.html
+# east-europe-2026/index.html 은 .gitignore에 등록됨
 ```
 
-## 구조
+## 브랜치 구조
+
+- `main` — 소스 파일만 (YAML, Python, 루트 index.html). 직접 편집하는 브랜치.
+- `gh-pages` — Actions가 자동 관리하는 배포 브랜치. 건드리지 말 것.
+
+main에 bot 커밋이 없으므로 push/pull 충돌 없음.
+
+## 파일 구조
 
 ```
-travel-plan/
-├── .github/workflows/generate.yml   # YAML 변경 시 HTML 자동 생성
-├── index.html                       # 여행 목록 홈 (직접 편집 가능)
+travel-plan/  (main 브랜치)
+├── .github/workflows/generate.yml   # 트리거: YAML·생성기 변경 시 자동 배포
+├── .gitignore                        # east-europe-2026/index.html 제외됨
+├── index.html                        # 여행 목록 홈 (직접 편집 가능)
 └── east-europe-2026/
-    ├── index.html                   # 생성된 파일 — 직접 편집 금지
-    ├── europe_2026.yaml             # 데이터 원본 — 여기만 편집
-    └── generate_itinerary.py        # HTML 생성기
+    ├── europe_2026.yaml              # 데이터 원본 — 여기만 편집
+    └── generate_itinerary.py         # HTML 생성기
 ```
 
 ## YAML 구조
