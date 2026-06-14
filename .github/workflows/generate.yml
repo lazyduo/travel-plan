@@ -5,8 +5,10 @@ on:
     branches: [main]
     paths:
       - 'index.html'
+      - 'assets/**'
       - '**/europe_2026.yaml'
       - '**/generate_itinerary.py'
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -28,6 +30,7 @@ jobs:
         run: |
           mkdir -p _site/east-europe-2026
           cp index.html _site/
+          cp -r assets _site/
           python3 east-europe-2026/generate_itinerary.py \
             east-europe-2026/europe_2026.yaml \
             _site/east-europe-2026/index.html

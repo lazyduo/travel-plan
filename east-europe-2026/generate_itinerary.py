@@ -44,12 +44,17 @@ body{font-family:-apple-system,'Noto Sans KR','Apple SD Gothic Neo',BlinkMacSyst
   background:var(--bg);color:var(--text);line-height:1.7;font-size:14px}
 
 /* HERO */
-.hero{background:linear-gradient(150deg,#0D1B2A 0%,#102845 55%,#0A2040 100%);
-  color:#fff;padding:64px 24px 72px;text-align:center;position:relative;overflow:hidden}
+.hero{background:#0A1929;color:#fff;padding:64px 24px 72px;text-align:center;
+  position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 40%}
+.hero-overlay{position:absolute;inset:0;
+  background:linear-gradient(150deg,rgba(10,25,41,.82) 0%,rgba(13,35,60,.72) 50%,rgba(8,20,40,.84) 100%)}
 .hero::before{content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(46,134,255,.12),transparent);pointer-events:none}
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(46,134,255,.10),transparent);
+  pointer-events:none;z-index:1}
 .hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:52px;
-  background:var(--bg);clip-path:ellipse(55% 100% at 50% 100%)}
+  background:var(--bg);clip-path:ellipse(55% 100% at 50% 100%);z-index:2}
+.hero-ey,.hero h1,.hero-sub,.route{position:relative;z-index:3}
 .hero-ey{font-size:11px;letter-spacing:4px;text-transform:uppercase;opacity:.5;margin-bottom:18px}
 .hero h1{font-size:clamp(1.9rem,5vw,3.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;
   margin-bottom:12px;background:linear-gradient(135deg,#fff 40%,#90C4E8);
@@ -273,8 +278,14 @@ def build_hero(meta, cities):
       </div>""")
         if i < len(cities) - 1:
             stops.append('<div class="route-line"></div>')
+
+    cover = meta.get('cover_image')
+    bg_layers = (f'<div class="hero-bg" style="background-image:url(\'{e(cover)}\')"></div>'
+                 '<div class="hero-overlay"></div>') if cover else ''
+
     return f"""
 <div class="hero">
+  {bg_layers}
   <div class="hero-ey">{e(meta.get('duration',''))} · 가족 여행</div>
   <h1>{e(meta.get('title','동유럽 가족여행'))}</h1>
   <p class="hero-sub">{e(meta.get('dates_ko',''))}</p>

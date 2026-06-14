@@ -2,6 +2,7 @@ meta:
   title: 동유럽 가족여행
   dates_ko: "2026년 9월 14일 — 9월 25일"
   duration: "11박 12일"
+  cover_image: "../assets/budapest.jpg"
 
 flights:
   outbound:
