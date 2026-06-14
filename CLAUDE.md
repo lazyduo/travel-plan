@@ -5,27 +5,29 @@ URL: https://lazyduo.github.io/travel-plan/
 
 ## 핵심 규칙
 
-**HTML을 직접 편집하지 말 것.** 모든 내용 변경은 YAML → 생성기 실행 순서로.
+**HTML을 직접 편집하지 말 것.** YAML만 편집하고 푸시하면 GitHub Actions가 HTML을 자동 재생성한다.
 
 ```
-# 1. YAML 편집
-vi east-europe-2026/europe_2026.yaml
+# YAML만 편집 후 푸시하면 끝
+git add east-europe-2026/europe_2026.yaml
+git commit -m "update: ..."
+git push
+# → Actions가 index.html 자동 생성 & 커밋 → Pages 배포
+```
 
-# 2. HTML 재생성
+로컬에서 미리 확인하고 싶을 때만 직접 실행:
+```
+pip install pyyaml
 python3 east-europe-2026/generate_itinerary.py \
   east-europe-2026/europe_2026.yaml \
   east-europe-2026/index.html
-
-# 3. 커밋 & 푸시
-git add east-europe-2026/index.html
-git commit -m "update: ..."
-git push
 ```
 
 ## 구조
 
 ```
 travel-plan/
+├── .github/workflows/generate.yml   # YAML 변경 시 HTML 자동 생성
 ├── index.html                       # 여행 목록 홈 (직접 편집 가능)
 └── east-europe-2026/
     ├── index.html                   # 생성된 파일 — 직접 편집 금지
@@ -33,7 +35,7 @@ travel-plan/
     └── generate_itinerary.py        # HTML 생성기
 ```
 
-## YAML 구조 요약
+## YAML 구조
 
 ```yaml
 meta:          # 제목, 날짜, 기간
@@ -44,20 +46,20 @@ days:          # 날짜별 일정 (activities 리스트)
 
 ### activity 타입
 
-| type   | 아이콘 | 용도               |
-|--------|--------|--------------------|
-| flight | 항공   | 항공편 이동        |
-| hotel  | 숙소   | 체크인             |
-| sight  | 관광   | 관광지             |
-| art    | 미술   | 미술관/갤러리      |
-| nature | 자연   | 자연/정원/호수     |
-| music  | 음악   | 공연/음악 관련     |
-| spa    | 온천   | 온천/스파          |
-| boat   | 유람   | 유람선/보트        |
-| drive  | 차량   | 차량 이동          |
-| night  | 야경   | 야경 감상          |
-| shop   | 쇼핑   | 쇼핑               |
-| cafe   | 카페   | 카페               |
+| type   | 용도               |
+|--------|--------------------|
+| flight | 항공편 이동        |
+| hotel  | 체크인             |
+| sight  | 관광지             |
+| art    | 미술관/갤러리      |
+| nature | 자연/정원/호수     |
+| music  | 공연/음악 관련     |
+| spa    | 온천/스파          |
+| boat   | 유람선/보트        |
+| drive  | 차량 이동          |
+| night  | 야경 감상          |
+| shop   | 쇼핑               |
+| cafe   | 카페               |
 
 ### activity 필드
 
@@ -78,8 +80,3 @@ transfer:
   to: "도착지"
   note: "메모"
 ```
-
-## 의존성
-
-- Python 3
-- PyYAML: `pip install pyyaml`
